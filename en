@@ -2,3 +2,8 @@ const EnvVarPrefix = "OP_DRIPPER"
 
 func prefixEnvVars(name string) []string {
 	return opservice.PrefixEnvVar(EnvVarPrefix, name)
+DrippieAddressFlag = &cli.StringFlag{
+		Name:     "drippie-address",
+		Usage:    "The address of the drippie contract",
+		EnvVars:  prefixEnvVars("DRIPPIE_ADDRESS"),
+		Required: true,
