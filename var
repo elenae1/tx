@@ -1,0 +1,4 @@
+const EnvVarPrefix = "OP_DRIPPER"
+
+func prefixEnvVars(name string) []string {
+	return opservice.PrefixEnvVar(EnvVarPrefix, name)
